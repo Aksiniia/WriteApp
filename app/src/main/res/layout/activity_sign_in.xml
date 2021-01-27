@@ -133,6 +133,7 @@
         android:textColor="@color/colorWhite" />
 
     <TextView
+        android:id="@+id/signInSwipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
