@@ -99,7 +99,7 @@
                     android:layout_marginEnd="20dp"
                     android:layout_weight="1"
                     android:backgroundTint="@color/colorWhite"
-                    android:text="Continue with Facebook"
+                    android:text="Continue with Facebook "
                     android:textAllCaps="false"
                     android:textColor="@color/colorBlack"
                     android:textSize="10sp" />
