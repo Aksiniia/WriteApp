@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context="fragment.SignInFragment">
+    tools:context=".fragment.SignInFragment">
 
     <ImageView
         android:layout_width="match_parent"
@@ -103,7 +103,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/buttonIn"
+            android:id="@+id/signInConfirm"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="20dp"
@@ -111,16 +111,14 @@
             android:text="Sign In"
             android:textAllCaps="false" />
 
-        <Button
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="5dp"
             android:backgroundTint="@color/colorMilkWhite"
             android:text="Forgot password?"
             android:textColor="@color/colorBlack"
             android:textSize="10sp" />
-
     </LinearLayout>
-
-
 </FrameLayout>
