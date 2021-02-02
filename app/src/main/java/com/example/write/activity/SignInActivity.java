@@ -6,7 +6,9 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.write.R;
-import com.example.write.SignIn;
+import fragment.SignInFragment;
+
+import fragment.SignUpFragment;
 
 public class SignInActivity extends AppCompatActivity {
 
@@ -17,21 +19,14 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
-        getSupportFragmentManager()
-                .beginTransaction()
-                    .add(R.id.container, new SignIn())
-                    .commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.container, new SignInFragment()).commit();
 
-        //findViewById(R.id.signInSwipe).setOnClickListener(v -> startActivity(new Intent(SignInActivity.this, SignUpActivity.class)));
 
         signIn = findViewById(R.id.button_in);
         signIn.setOnClickListener(v -> {
                     signIn.setTextColor(getColor(R.color.colorWhite));
                     signUp.setTextColor(getColor(R.color.colorGray));
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                                .replace(R.id.container, new SignIn())
-                                .commit();
+                    getSupportFragmentManager().beginTransaction().replace(R.id.container, new SignInFragment()).commit();
                 }
         );
 

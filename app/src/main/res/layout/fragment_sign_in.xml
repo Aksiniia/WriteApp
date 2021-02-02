@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".SignIn">
-
+    tools:context="fragment.SignInFragment">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="bottom"
         android:scaleType="fitXY"
-        app:srcCompat="@drawable/sign_jn_bg" />
+        app:srcCompat="@drawable/sign_in_bg" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
             android:background="@color/colorWhite"
             android:hint="Email"
             android:inputType="textEmailAddress"
@@ -36,7 +37,7 @@
             android:id="@+id/signInPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="@color/colorWhite"
             android:hint="Password"
             android:inputType="textPassword"
@@ -102,13 +103,24 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/b_in"
+            android:id="@+id/buttonIn"
             android:layout_width="match_parent"
             android:layout_height="65dp"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/colorBlack"
             android:text="Sign In"
             android:textAllCaps="false" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/colorMilkWhite"
+            android:text="Forgot password?"
+            android:textColor="@color/colorBlack"
+            android:textSize="10sp" />
+
     </LinearLayout>
+
 
 </FrameLayout>
