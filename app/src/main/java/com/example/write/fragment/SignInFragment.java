@@ -15,6 +15,7 @@ import com.example.write.R;
 import com.example.write.activity.MainActivity;
 
 public class SignInFragment extends Fragment {
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -22,13 +23,21 @@ public class SignInFragment extends Fragment {
 
         Activity context = (Activity) getContext();
 
+        view.findViewById(R.id.signInToSignUp).setOnClickListener(v ->
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.loginContainer, new SignUpFragment())
+                        .commit());
+
+        view.findViewById(R.id.signInRecover).setOnClickListener(v ->
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.loginContainer, new RecoverFragment())
+                        .commit());
+
         view.findViewById(R.id.signInConfirm).setOnClickListener(v -> {
-            try {
-                context.startActivity(new Intent(getContext(), MainActivity.class));
-                context.finish();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            context.startActivity(new Intent(getContext(), MainActivity.class));
+            context.finish();
         });
 
         return view;
