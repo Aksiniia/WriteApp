@@ -7,4 +7,6 @@
     <color name="colorTwitter">#55acee</color>
     <color name="colorFacebook">#3b5998</color>
     <color name="colorBottomNavigation">#F2151515</color>
+    <color name="addNote">#262626</color>
+    <color name="colorGreen">#4CD964</color>
 </resources>
