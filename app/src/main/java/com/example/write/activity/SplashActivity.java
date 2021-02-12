@@ -7,6 +7,9 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.write.R;
+import com.example.write.data.UserData;
+
+import java.util.ArrayList;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -14,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        UserData.userNotes = new ArrayList<>();
         new Handler().postDelayed(() -> {
             startActivity(
                     new Intent(
