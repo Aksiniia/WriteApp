@@ -3,19 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/navDocuments"
         android:icon="@drawable/ic_documents"
         android:title="Documents"
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/navReader"
         android:icon="@drawable/ic_read"
         android:title="Reader Mode"
         app:showAsAction="ifRoom" />
 
     <item
+        android:id="@+id/navSettings"
         android:icon="@drawable/ic_settings"
         android:title="Settings"
         app:showAsAction="ifRoom" />
-
-
 </menu>

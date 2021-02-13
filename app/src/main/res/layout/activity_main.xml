@@ -7,41 +7,14 @@
     android:background="@color/colorBlack"
     tools:context=".activity.MainActivity">
 
-    <LinearLayout
+    <FrameLayout
+        android:id="@+id/mainFrame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:src="@drawable/logo" />
-
-        <EditText
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="@drawable/field_bg"
-            android:gravity="center"
-            android:hint="Search"
-            android:textColor="@color/colorWhite"
-            android:textColorHint="@color/colorGray" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/mainRecycler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="55dp" />
-    </LinearLayout>
+        android:layout_marginBottom="56dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/mainBottomNav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"

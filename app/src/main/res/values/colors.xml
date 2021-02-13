@@ -9,4 +9,5 @@
     <color name="colorBottomNavigation">#F2151515</color>
     <color name="addNote">#262626</color>
     <color name="colorGreen">#4CD964</color>
+    <color name="colorDarkGray">#1A1A1A</color>
 </resources>

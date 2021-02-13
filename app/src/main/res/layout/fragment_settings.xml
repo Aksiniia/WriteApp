@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBlack">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@color/colorDarkGray"
+        android:gravity="center_horizontal"
+        android:paddingTop="40dp"
+        android:text="Settings"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="WRITTING"
+            android:textColor="@color/colorGray" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Keyboard Sound"
+            android:textColor="@color/colorWhite"
+            app:thumbTint="@color/colorWhite"
+            app:trackTint="@color/switch_track_color" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Auto Save"
+            android:textColor="@color/colorWhite"
+            app:thumbTint="@color/colorWhite"
+            app:trackTint="@color/switch_track_color" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Suggest Changes"
+            android:textColor="@color/colorWhite"
+            app:thumbTint="@color/colorWhite"
+            app:trackTint="@color/switch_track_color" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Show Word Countund"
+            android:textColor="@color/colorWhite"
+            app:thumbTint="@color/colorWhite"
+            app:trackTint="@color/switch_track_color" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="320dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:text="OTHER"
+            android:textColor="@color/colorGray" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Page Setup"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Share &amp; Export"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Help and Feedback"
+            android:textColor="@color/colorWhite" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorDarkGray"
+            android:drawableEnd="@drawable/ic_next"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text="Privacy Policy"
+            android:textColor="@color/colorWhite" />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="580dp"
+        android:src="@drawable/logo"
+        app:tint="#33FFFFFF" />
+</FrameLayout>
