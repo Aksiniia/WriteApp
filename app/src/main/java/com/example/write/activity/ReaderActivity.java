@@ -1,27 +1,23 @@
 package com.example.write.activity;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.write.R;
-import com.example.write.data.UserData;
-
-import java.util.ArrayList;
 
 public class ReaderActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_reader);
 
-        RecyclerView mainRecycler = findViewById(R.id.mainRecycler);
-        mainRecycler.setLayoutManager(new GridLayoutManager(this, 2));
-        mainRecycler.setAdapter(new ReaderAdapter(this, UserData.userNotes));
+        ((TextView) findViewById(R.id.readerText)).setText(
+                getIntent().getStringExtra("noteText")
+        );
 
-        UserData.mainRecycler = mainRecycler;
+        findViewById(R.id.readerBack).setOnClickListener(v -> finish());
     }
 }

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -20,6 +22,10 @@ public class SignUpFragment extends Fragment {
 
         Activity context = (Activity) getContext();
 
+        EditText signUpName = view.findViewById(R.id.signUpName);
+        EditText signUpEmail = view.findViewById(R.id.signUpEmail);
+        EditText signUpPassword = view.findViewById(R.id.signUpPassword);
+
         view.findViewById(R.id.signUpToSignIn).setOnClickListener(v ->
                 getFragmentManager()
                         .beginTransaction()
@@ -27,9 +33,25 @@ public class SignUpFragment extends Fragment {
                         .commit());
 
         view.findViewById(R.id.signUpConfirm).setOnClickListener(v -> {
-            context.startActivity(new Intent(getContext(), MainActivity.class));
-            context.finish();
+            String name = signUpName.getText().toString();
+            String email = signUpEmail.getText().toString();
+            String password = signUpPassword.getText().toString();
+
+            if (name.isEmpty())
+                Toast.makeText(context, "Введите имя пользователя", Toast.LENGTH_SHORT).show();
+
+            else if (!email.contains("@"))
+                Toast.makeText(context, "Введите корректный Email", Toast.LENGTH_SHORT).show();
+
+            else if (password.length() < 6)
+                Toast.makeText(context, "Введите более длинный пароль", Toast.LENGTH_SHORT).show();
+
+            else {
+                context.startActivity(new Intent(getContext(), MainActivity.class));
+                context.finish();
+            }
         });
+
         return view;
     }
 }

@@ -9,6 +9,11 @@ import com.example.write.R;
 import com.example.write.data.UserData;
 import com.example.write.model.NoteModel;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Calendar;
+import java.util.Date;
+
 public class EditActivity extends AppCompatActivity {
 
     @Override
@@ -31,11 +36,13 @@ public class EditActivity extends AppCompatActivity {
             if (!text.equals("")) {
                 if (notePosition == 0)
                     UserData.userNotes.add(
-                            new NoteModel(
-                                    "08.01.2021",
-                                    text
-                            )
-                    );
+                        new NoteModel(
+                                DateTimeFormatter
+                                        .ofPattern("dd.MM.yyyy HH:mm")
+                                        .format(LocalDateTime.now()),
+                                text
+                        )
+                );
 
                 else
                     UserData.userNotes.get(notePosition - 1).text = text;

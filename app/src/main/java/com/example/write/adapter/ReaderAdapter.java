@@ -1,4 +1,4 @@
-package com.example.write.activity;
+package com.example.write.adapter;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.write.R;
+import com.example.write.activity.EditActivity;
+import com.example.write.activity.ReaderActivity;
 import com.example.write.model.NoteModel;
 
 import org.apache.commons.lang3.StringUtils;
@@ -58,7 +60,7 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
                 String.format(
                         Locale.getDefault(),
                         "%d Pages",
-                        StringUtils.countMatches(note.text, "\n\n")
+                        StringUtils.countMatches(note.text, "\n\n") + 1
                 )
         );
 
@@ -67,13 +69,10 @@ public class ReaderAdapter extends RecyclerView.Adapter<ReaderAdapter.ViewHolder
                 context.startActivity(
                         new Intent(
                                 context,
-                                EditActivity.class
+                                ReaderActivity.class
                         ).putExtra(
                                 "noteText",
                                 notes.get(position).text
-                        ).putExtra(
-                                "noteIndex",
-                                position
                         )
                 )
         );

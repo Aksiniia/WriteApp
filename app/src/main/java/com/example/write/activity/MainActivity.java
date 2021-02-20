@@ -1,17 +1,16 @@
 package com.example.write.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
 
 import com.example.write.R;
-import com.example.write.adapter.MainAdapter;
-import com.example.write.data.UserData;
-
-import java.util.ArrayList;
+import com.example.write.fragment.DocumentsFragment;
+import com.example.write.fragment.ReaderFragment;
+import com.example.write.fragment.SettingsFragment;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,12 +19,41 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        BottomNavigationView mainBottomNav = findViewById(R.id.mainBottomNav);
+        mainBottomNav.setOnNavigationItemSelectedListener(item -> {
+            if (mainBottomNav.getSelectedItemId() == item.getItemId())
+                return false;
 
+            switch (item.getItemId()) {
+                case R.id.navDocuments: {
+                    changeFragment(new DocumentsFragment());
 
-        RecyclerView mainRecycler = findViewById(R.id.mainRecycler);
-        mainRecycler.setLayoutManager(new GridLayoutManager(this, 2));
-        mainRecycler.setAdapter(new MainAdapter(this, UserData.userNotes));
+                    break;
+                }
 
-        UserData.mainRecycler = mainRecycler;
+                case R.id.navReader: {
+                    changeFragment(new ReaderFragment());
+
+                    break;
+                }
+
+                default: {
+                    changeFragment(new SettingsFragment());
+
+                    break;
+                }
+            }
+
+            return true;
+        });
+
+        changeFragment(new DocumentsFragment());
+    }
+
+    private void changeFragment(Fragment fragment) {
+        getSupportFragmentManager()
+                .beginTransaction()
+                .replace(R.id.mainFrame, fragment)
+                .commit();
     }
 }

@@ -19,7 +19,7 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.List;
 import java.util.Locale;
 
-public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
+public class  MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
     Context context;
     List<NoteModel> notes;
